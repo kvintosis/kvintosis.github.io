@@ -48,4 +48,23 @@
         line-height: 1.3;
         color: @black;
     }
+
+    &--red{
+        color: @red;
+        .check__mark{
+            border-color: @red ;
+        }
+        .__input{
+            &:checked{
+                & ~ .check__mark{
+                    background-color: @red;
+                }
+            }
+        }
+    }
+
+    &--disabled{
+        pointer-events: none;
+        opacity: 0.5s;
+    }
 }

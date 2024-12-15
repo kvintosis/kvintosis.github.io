@@ -22,6 +22,7 @@
         "imagemin-gifsicle": "^7.0.0",
         "imagemin-mozjpeg": "^10.0.0",
         "imagemin-optipng": "^8.0.0",
+        "less": "^4.2.1",
         "postcss": "^8.4.5",
         "postcss-sort-media-queries": "^4.2.1"
     },

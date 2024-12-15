@@ -1,61 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href = "styles/styles.min.css">
-</head>
-
+@@include('blocks/head.html')
 <body class = "body">
-        <header class = "page-header">
-            <div class = "page-header__container">
-                <a href = "index.html" class = "page-header__logo">
-                    <img 
-                    src = "src/assets/svg-sprite/logo.svg" 
-                    class = "page-header__logo-icon" 
-                    alt = "logo">
-                </a>
-                <nav class = "page-header__nav">
-                    <a href="events.html" class="page-header__nav-link">Мероприятия</a>
-                    <a href="#" class="page-header__nav-link">Блог</a>
-                    <a href="#" class="page-header__nav-link">О нас</a>
-                    <a href="#" class="page-header__nav-link">Контакты</a>                
-                </nav>
-                <div class="page-header__right-block">
-                    <a href = "#" class="page-header__btn btn"> Войти</a>
-                    <!-- <a href = "#" class="page-heafer__name">Александр С.</a>
-                    <a href = "#" class="page-heafer__logout">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 17L15 12L10 7" stroke="#A51505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15 12H3" stroke="#A51505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke="#A51505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                    </a> -->
-                </div>
+    @@include('blocks/page-header.html')
+    <main class="main">
+        <div class = "event">
+            <div class="event__content content">
+                <h5> Программа пероприятия:</h5>
+                <ul>
+                    <li>20:15 - Приветствие гостей</li>
+                </ul>
+                <h5> Программа пероприятия:</h5>
+                <p>
+                    Первый альбом-компиляция Sade, выпущенный в 1994 году. 
+                    Он содержит 9 треков, включая самые популярные хиты группы, раритеты и их любимые треки. 
+                    </p>
+                <p>
+                    Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры. 
+                    Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав 
+                    более 2 миллионов копий в Европе.
+                </p>
+                <ol>
+                    <li>Your Love is King</li>
+                </ol>
             </div>
-        </header>    
-        <main class = "main">
-            <article>
-                <form class = "reserve">
-                    <div class="reserve__checkbox">
-                        checkbox
-                    </div>
-                    <div class="reserve__scheme">
-                        scheme
-                    </div>
-                    <div class="reserve__order">
-                        order
-                    </div>
-                    <div class="reserve__legend">
-                        legend
-                    </div>
-                </form>
-            </article>
-        </main>
+        </div>
+      </main>
         <footer class = "page-footer">
-
         </footer>
 </body>
-
 </html>

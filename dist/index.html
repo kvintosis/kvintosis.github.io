@@ -16,18 +16,30 @@
   <header class="page-header">
     <div class="page-header__container">
       <a href="index.html" class="page-header__logo">
-        <svg class="icon">
+        <svg class="page-header__logo-icon" width="202" height="147">
           <use xlink:href="assets/icons/symbols.svg#logo"></use>
         </svg>
       </a>
       <nav class="page-header__nav">
         <a href="events.html" class="page-header__nav-link">Мероприятия</a>
-        <a href="index.html" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <a href="#" class="page-header__nav-user-link">
+          Александр С.
+          <svg class="page-header__user-icon" width="24" height="24">
+            <use xlink: href="assets/icons/symbols.svg#logout"></use>
+          </svg>
+        </a>
       </nav>
       <div class="page-header__right-block">
-        <a href="#" class="page-header__btn btn"> Войти</a>
+        <a href="#" class="page-header__user-btn btn">
+          Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink: href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
         <!-- <a href = "#" class="page-heafer__name">Александр С.</a>
             <a href = "#" class="page-heafer__logout">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,76 +48,182 @@
                     <path d="M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke="#A51505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
             </a> -->
+
+        <button type="button" class="page-header__nav-toggle" id="js-navtoggle">
+          <span class="page-header__nav-toggle-line"></span>
+        </button>
+
       </div>
     </div>
   </header>
   <main class="main">
-    <div class="home">
-      <section class="listing home__listing">
-        <h2 class="listing__title section-title">Блог</h2>
-        <div class="listing__article-list">
-          <!-- prettier-ignore -->
-          <article class="article-card listing__article-card">
-            <a href="#" class="article-card__link">
-              <picture class="article-card__picture">
-                <img src="assets/images/blog/theater.jpg" alt="Theatre Photosession" class="article-card__img" />
-              </picture>
-            </a>
-            <div class="article-card__info">
-              <time datetime="2022-11-26T00:00" class="article-card__time">26.11.2022</time>
-              <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
-                <div class="article-card__arrow arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </div>
-              </a>
-              <p class="article-card__description">Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было </p>
-            </div>
-          </article>
-          <article class="article-card listing__article-card">
-            <a href="#" class="article-card__link">
-              <picture class="article-card__picture">
-                <img src="assets/images/blog/vr.jpg" alt="VR Tomsk" class="article-card__img" />
-              </picture>
-            </a>
-            <div class="article-card__info">
-              <time datetime="2022-11-05T00:00" class="article-card__time">05.11.2022</time>
-              <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">Выставка VR в Томске</h4>
-                <div class="article-card__arrow arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </div>
-              </a>
-              <p class="article-card__description">Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске..</p>
-            </div>
-          </article>
-          <article class="article-card listing__article-card">
-            <a href="#" class="article-card__link">
-              <picture class="article-card__picture">
-                <img src="assets/images/blog/radio.jpg" alt="Rocking radio" class="article-card__img" />
-              </picture>
-            </a>
-            <div class="article-card__info">
-              <time datetime="2022-11-01T00:00" class="article-card__time">01.11.2022</time>
-              <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
-                <div class="article-card__arrow arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </div>
-              </a>
-              <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
-            </div>
-          </article>
+    <div>
+      <div class="lenni-art">
+        <h2 class="lenni-art__title">
+          АРТ - ПРОСТРАНСТВО
+        </h2>
+        <svg class="lenni-art__logo-icon">
+          <use xlink:href="assets/icons/symbols.svg#LENNI"></use>
+        </svg>
+        <h2 class="lenni-art__title">
+          ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ МЕСТО ДЛЯ НАСТОЯЩЕГО
+        </h2>
+
+        <div class="lenni-art__button-block">
+          <h4 class="lenni-art__pre-button-text">
+            Я ХОЧУ:
+          </h4>
+          <button type="button" class="lenni-art__btn btn btn--red">
+            Провести мероприятие
+          </button>
+
+          <button type="button" class="lenni-art__btn btn">
+            Стать арендатором
+          </button>
         </div>
-        <a href="#" class="listing__link link">Смотреть все</a>
-      </section>
+      </div>
     </div>
+    <div>
+      <div class="about">
+        <div class="about__container">
+          <h2 class="listing__title section-title">О нас</h2>
+          <div class="about__block1"></div>
+          <div class="about__block2">
+            <picture class="about__picture">
+              <img src="assets/images/about/pic.jpg" alt="about1">
+            </picture>
+            <h3 class="about__subtitle">
+              Мы предоставляем площади для вашего мероприятия
+            </h3>
+            <p class="about__text">
+              И оказываем помощь с организацией, если вам это нужно.
+              Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым
+              ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.
+            </p>
+            <picture class="about__picture2">
+              <img src="assets/images/about/pic2.jpg" alt="about2">
+            </picture>
+          </div>
+          <div class="about__block3">
+            <picture class="about__block3-picture">
+              <img src="assets/images/about/pic3.jpg" alt="about3" class="about__block3-img">
+            </picture>
+            <div class="about__block3-content">
+              <p class="about__block3-text">
+                Мы уже успешно организовали и провели более 100 проектов.
+                Посмотрите, как это было классно.
+              </p>
+              <a href="#" class="about__block3-link">
+                Смотреть
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="events">
+      <div class="listing events__listing">
+        <h2 class="listing__title section-title">Мероприятия</h2>
+        <div class="listing__events-list">
+          <div class="listing__events-list">
+            <!-- prettier-ignore -->
+            <article class="event-card  listing__event-card">
+              <a href="#" class="event-card__link">
+                <picture class="event-card__picture">
+                  <img src="assets/images/events/Nirvana.jpg" alt="nirvana" class="event-card__img" />
+                </picture>
+                <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+                <p class="event-card__text">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
+              </a>
+            </article>
+            <article class="event-card  listing__event-card">
+              <a href="#" class="event-card__link">
+                <picture class="event-card__picture">
+                  <img src="assets/images/events/HowStuffWorks.jpg" alt="stuff" class="event-card__img" />
+                </picture>
+                <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                <p class="event-card__text">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+              </a>
+            </article>
+            <article class="event-card  listing__event-card">
+              <a href="#" class="event-card__link">
+                <picture class="event-card__picture">
+                  <img src="assets/images/events/Sade.jpg" alt="sade" class="event-card__img" />
+                </picture>
+                <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                <p class="event-card__text">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+              </a>
+            </article>
+          </div>
+          <div class="home">
+            <section class="listing home__listing">
+              <h2 class="listing__title section-title">Блог</h2>
+              <div class="listing__article-list">
+                <!-- prettier-ignore -->
+                <article class="article-card listing__article-card">
+                  <a href="#" class="article-card__link">
+                    <picture class="article-card__picture">
+                      <img src="assets/images/blog/theater.jpg" alt="Theatre Photosession" class="article-card__img" />
+                    </picture>
+                  </a>
+                  <div class="article-card__info">
+                    <time datetime="2022-11-26T00:00" class="article-card__time">26.11.2022</time>
+                    <a href="#" class="article-card__title-link">
+                      <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
+                      <div class="article-card__arrow arrow">
+                        <svg class="arrow__icon" width="92" height="62">
+                          <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </a>
+                    <p class="article-card__description">Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было </p>
+                  </div>
+                </article>
+                <article class="article-card listing__article-card">
+                  <a href="#" class="article-card__link">
+                    <picture class="article-card__picture">
+                      <img src="assets/images/blog/vr.jpg" alt="VR Tomsk" class="article-card__img" />
+                    </picture>
+                  </a>
+                  <div class="article-card__info">
+                    <time datetime="2022-11-05T00:00" class="article-card__time">05.11.2022</time>
+                    <a href="#" class="article-card__title-link">
+                      <h4 class="article-card__title">Выставка VR в Томске</h4>
+                      <div class="article-card__arrow arrow">
+                        <svg class="arrow__icon" width="92" height="62">
+                          <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </a>
+                    <p class="article-card__description">Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске..</p>
+                  </div>
+                </article>
+                <article class="article-card listing__article-card">
+                  <a href="#" class="article-card__link">
+                    <picture class="article-card__picture">
+                      <img src="assets/images/blog/radio.jpg" alt="Rocking radio" class="article-card__img" />
+                    </picture>
+                  </a>
+                  <div class="article-card__info">
+                    <time datetime="2022-11-01T00:00" class="article-card__time">01.11.2022</time>
+                    <a href="#" class="article-card__title-link">
+                      <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
+                      <div class="article-card__arrow arrow">
+                        <svg class="arrow__icon" width="92" height="62">
+                          <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </a>
+                    <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
+                  </div>
+                </article>
+              </div>
+              <a href="#" class="listing__link link">Смотреть все</a>
+            </section>
+          </div>
   </main>
   <footer class="page-footer">
     <div class="pp">

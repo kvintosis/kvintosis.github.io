@@ -124,7 +124,7 @@ function svgSprite() {
     )
     .pipe(
       svgstore({
-        inlineSvg: true // Использует инлайн SVG
+        inlineSvg: true 
       })
     )
     .pipe(rename('symbols.svg')) // Переименовывает итоговый файл

@@ -16,18 +16,30 @@
   <header class="page-header">
     <div class="page-header__container">
       <a href="index.html" class="page-header__logo">
-        <svg class="icon">
+        <svg class="page-header__logo-icon" width="202" height="147">
           <use xlink:href="assets/icons/symbols.svg#logo"></use>
         </svg>
       </a>
       <nav class="page-header__nav">
         <a href="events.html" class="page-header__nav-link">Мероприятия</a>
-        <a href="index.html" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <a href="#" class="page-header__nav-user-link">
+          Александр С.
+          <svg class="page-header__user-icon" width="24" height="24">
+            <use xlink: href="assets/icons/symbols.svg#logout"></use>
+          </svg>
+        </a>
       </nav>
       <div class="page-header__right-block">
-        <a href="#" class="page-header__btn btn"> Войти</a>
+        <a href="#" class="page-header__user-btn btn">
+          Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink: href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
         <!-- <a href = "#" class="page-heafer__name">Александр С.</a>
             <a href = "#" class="page-heafer__logout">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,6 +48,11 @@
                     <path d="M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke="#A51505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
             </a> -->
+
+        <button type="button" class="page-header__nav-toggle" id="js-navtoggle">
+          <span class="page-header__nav-toggle-line"></span>
+        </button>
+
       </div>
     </div>
   </header>
@@ -82,6 +99,133 @@
 
         </div>
       </div>
+      <table class="table events__tarifs-table">
+        <thead class="table__thead">
+          <tr class="table__thead-tr">
+            <th class="table__thead-th"></th>
+            <th class="table__thead-th">Тариф «Light»</th>
+            <th class="table__thead-th">Тариф «Promo»</th>
+            <th class="table__thead-th">Тариф «All stars»</th>
+          </tr>
+        </thead>
+        <tbody class="table__tbody">
+          <tr class="table__tr">
+            <th class="table__tbody-th">Стоймость за час</th>
+            <td class="table__td">1 000 ₽</td>
+            <td class="table__td">3 000 ₽</td>
+            <td class="table__td">от 6 000 ₽</td>
+          </tr>
+          <tr class="table__tr">
+            <th class="table__tbody-th">Ведущие мероприятия</th>
+            <td class="table__td"></td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr class="table__tr">
+            <th class="table__tbody-th">Фотосъемка</th>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr class="table__tr">
+            <th class="table__tbody-th">Видеосъемка</th>
+            <td class="table__td"></td>
+            <td class="table__td"></td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr class="table__tr">
+            <th class="table__tbody-th">Организация питания</th>
+            <td class="table__td"></td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr class="table__tr">
+            <th class="table__tbody-th">Декор</th>
+            <td class="table__td"></td>
+            <td class="table__td"></td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr class="table__tr">
+            <th class="table__tbody-th">Звуковое сопровождение</th>
+            <td class="table__td"></td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr class="table__tr">
+            <th class="table__tbody-th">Дополнительное освещение</th>
+            <td class="table__td"></td>
+            <td class="table__td"></td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr class="table__tr">
+            <th class="table__tbody-th">Клининг</th>
+            <td class="table__td"></td>
+            <td class="table__td"></td>
+            <td class="table__td">
+              <svg class="x-btn__icon" width="12" height="12">
+                <use xlink:href="assets/icons/symbols.svg#ok"></use>
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot class="table__footer">
+          <tr class="table__footer-tr">
+            <th class="table__footer-th"></th>
+            <th class="table__footer-th">Тариф «Light»</th>
+            <th class="table__footer-th">Тариф «Promo»</th>
+            <th class="table__footer-th">Тариф «All stars»</th>
+          </tr>
+
+        </tfoot>
+      </table>
     </div>
   </main>
   <footer class="page-footer">
