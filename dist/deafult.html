@@ -2,13 +2,73 @@
 <html>
 
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.min.css?ver=0">
+
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+
+  <meta name="msapplication-TileColor" content="#dedede">
+  <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+  <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+
+  <!-- <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#bc3324"> -->
+
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+
+  <meta name="apple-mobile-web-app-title" content="Lenni Art">
+  <meta name="application-name" content="Lenni Art">
+  <meta name="theme-color" content="#dedede">
+
+  <meta name="description" content="Арт—пространство для людей, горящих сердец и делом">
+  <meta name="keywords" content="Lenni Art, пространство, мероприятия">
+
+  <meta property="og:title" content="Lenni Art" />
+  <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом" />
+  <meta property="og:image" content="/assets/images/lenni-art.jpg">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lenni-art.ru/" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.min.css">
+
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+
+  <script src="scripts/toastr.min.js"></script>
+  <script type="text/javascript">
+        Command: toastr["success"]("Вы сделали все правильно", "Успех!")
+        toastr.optuins = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toastr-top-right",
+            "preventDuplicates": false,
+            "onClick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "2500",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hodeMethod": "fadeOut",
+        }
+
+        toastr["success"](`<div><div class="toast-title">Заголовок</><div class="toast-message">Сообщение</div><div class="toast-btns"><a href="#" class="btn btn--red toast-btn">Вход</a><a href="#" class="btn toast-btn">Регистрация</a></div></div>`)
+    </script>
+
+  <title>Lenni Art</title>
 </head>
 
 <body class="body">
@@ -19,8 +79,9 @@
           <use xlink:href="assets/icons/symbols.svg#logo"></use>
         </svg>
       </a>
+
       <nav class="page-header__nav">
-        <a href="events.html" class="page-header__nav-link">Мероприятия</a>
+        <a href="#" class="page-header__nav-link">Мероприятия</a>
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
@@ -39,17 +100,9 @@
             <use xlink: href="assets/icons/symbols.svg#user"></use>
           </svg>
         </a>
-        <!-- <a href = "#" class="page-heafer__name">Александр С.</a>
-            <a href = "#" class="page-heafer__logout">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 17L15 12L10 7" stroke="#A51505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M15 12H3" stroke="#A51505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke="#A51505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-            </a> -->
 
         <button type="button" class="page-header__nav-toggle" id="js-navtoggle">
-          <span class="page-header__nav-toggle-line"></span>
+          <span class="page-header__nav-toggle"></span>
         </button>
 
       </div>

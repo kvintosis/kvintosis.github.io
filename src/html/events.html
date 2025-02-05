@@ -1,59 +1,44 @@
 <!DOCTYPE html>
-<html>
-    
+<html lang="en">
 @@include('blocks/head.html')
-
-<body class = "body">
-
+<body class="body">
+    <!-- prettier-ignore -->
     @@include('blocks/page-header.html')
 
-        <main class = "main">
-            <div class = "events">
-                <div class = "listing events__listing">
-                    <h2 class="listing__title section-title">Мероприятия</h2>
-                    <div class="listing__events-list">
-                        <div class="listing__events-list">
-                            <!-- prettier-ignore -->
-                            @@loop('blocks/event-card.html', [
-                              {
-                                "class": "listing__event-card",
-                                "img": "assets/images/events/Nirvana.jpg",
-                                "alt": "nirvana",
-                                "title": "Собираемся и слушаем альбом Nirvana",
-                                "text": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
-                                "time": "07.12.2022 | начало 18.00",
-                                "datetime": "2022-12-07T18:00"
-                              },
-                              {
-                                "class": "listing__event-card",
-                                "img": "assets/images/events/HowStuffWorks.jpg",
-                                "alt": "stuff",
-                                "title": "Есть тема, нужно обсудить с HowStuffWorks",
-                                "text": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
-                                "time": "14.12.2022 | начало 18.30",
-                                "datetime": "2022-12-14T18:30"
-                              },
-                              {
-                                "class": "listing__event-card",
-                                "img": "assets/images/events/Sade.jpg",
-                                "alt": "sade",
-                                "title": "Вечер | The Best of Sade",
-                                "text": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
-                                "time": "16.12.2022 | начало 20.00",
-                                "datetime": "2022-12-16T20:00"
-                              }
-                            ])
-                          </div>
-                      
+    <main class="main">
+        <div class="events">
+            <!-- prettier-ignore -->
+            @@include('blocks/events-listing.html', {"class": "events__listing"})
+        </div>
+        <div class="events__table-container">
+            <!-- prettier-ignore -->
+            @@include('blocks/table.html', {"class": "events__tariffs-table"})
+        </div>
+        
+        <section class="events__block">
+            <!-- prettier-ignore -->
+            @@include('blocks/offers.html', {"class": "events__offers"})
+    
+            <!-- prettier-ignore -->
+            @@include('blocks/info.html', {"class": "events__info"})
+        </section>
 
-                    </div>
-                </div>
-                @@include('blocks/table.html', {"class": "events__tarifs-table"})
-            </div>
-        </main>
-        <footer class = "page-footer">
-        @@include('blocks/event-pp.html')
-        </footer>
+    </main>
+
+     <!-- prettier-ignore -->
+     @@include('blocks/page-footer.html')
+
+     <!-- prettier-ignore -->
+    @@include('blocks/event-pp.html')
+
+    <script src="scripts/jquery.selectric.min.js"></script>
+    <script src="scripts/jquery.mask.js"></script>
+
+    <script src="scripts/air-datepicker.js"></script>
+
+    <script src="scripts/jquery.validate.js"></script>
+    
+    <script src="scripts/jquery.validate-init.js"></script>
+    <script src="scripts/main.min.js"></script>
 </body>
-
 </html>

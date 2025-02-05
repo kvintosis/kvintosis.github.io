@@ -1,56 +1,47 @@
-.reserve{
-    display: grid;
-    grid-template-columns: 405px 1fr;
-    grid-template-areas: 
-    "checkbox scheme"
-    "order legend";
-    gap: 65px 11%;
-    width: 100%;
+.reserve {
+  display: grid;
+  gap: 65px 11%;
+  grid-template-columns: 405px calc(89% - 405px);
+  grid-template-areas:
+      "checks scheme"
+      "order legend";
+  width: 100%;
 
-      &__scheme-wrapper {
-    position: relative;
-    width: 100%;
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      padding-top: 51.15384%;
-    }
-  }
-  &__scene {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  &__checks {
+      grid-area: checks;
   }
 
-  &__tickets {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+  &__order {
+      grid-area: order;
   }
-  &__qty {
-    &::after {
-      content: " " attr(data-caption) " | " attr(data-price);
-    }
+  
+  &__scheme {
+      grid-area: scheme;
   }
-  &__sum {
-    &::after {
-      content: attr(data-currency);
-      margin-left: 4px;
-      font-size: 0.95em;
-    }
+  
+  &__legend {
+      grid-area: legend;
   }
-  &__total {
-    &::before {
-      content: attr(data-caption);
-      margin-right: 30px;
-    }
-    &::after {
-      content: attr(data-currency);
-      margin-left: 4px;
-      font-size: 0.95em;
-    }
+
+  @media @bw1340 {
+      gap: 65px 6.5%;
+      grid-template-columns: 401px auto;
+  }
+
+  @media @bw768 {
+      gap: 60px;
+      grid-template-columns: auto 390px;
+      grid-template-areas:
+          "scheme scheme"
+          "checks legend"
+          "checks order";
+  }
+  @media @bw600 {
+      grid-template-columns: 100%;
+      grid-template-areas:
+          "scheme"
+          "legend"
+          "checks"
+          "order";
   }
 }

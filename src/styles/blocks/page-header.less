@@ -39,6 +39,7 @@
         height: 147px;
         font-size: 0;
         text-decoration: none;
+
         @media @bw1660 {
             width: 152px;
             height: 111px;
@@ -58,10 +59,10 @@
     } 
 
     &__nav{
+        box-sizing: border-box;
         display: flex;
         align-items: baseline;
         margin: 0 auto;
-        gap: 50px;
         @media @bw1020{
             margin: 0;
             position: absolute;
@@ -78,17 +79,31 @@
         }
     }
 
-    &__nav-link{
-        margin: 0 25px;
+    &__nav-link,
+    &__nav-user-link,
+    &__nav-logout {
+        color: @black;
         text-decoration: none;
+
+        &:active {
+            color: @red_dark;
+        }
+
+        &:hover {
+            color: @red;
+        }
+    }
+
+    &__nav-link {
+        margin: 0 25px;
+        color: @black;
+        font-weight: 600;
         font-size: 18px;
         line-height: 1.4;
-        color: #1F1E1E;
+        text-decoration: none;
         transition: color 0.2s;
-        &:hover, &:active{
-            color: #BC3324;
-        }
-        @media @bw1020{
+
+        @media @bw1020 {
             box-sizing: border-box;
             margin: 0;
             padding: 5px 0;
@@ -96,92 +111,104 @@
         }
     }
 
-    &__nav-toggle{
-        display: none;
-        @media @bw1020{
-            display: block;
-            position: relative;
-            border: none;
-            background-color: transparent;
-            outline: none;
-            border: 0;
-            width: 40px;
-            height: 40px;
-        }
-        &::before,
-        &::after{
-            content: '';
-            left: 10px;
-            width: 20px;
-            height: 2px;
-            border-radius: 2px;
-            background-color: @black;
-        }
-        &::before{
-            top: 13px;
-        }
-        &::after{
-            bottom: 13px;
-        }
-    }
-
-    &__nav-toggle-line{
-        position: absolute;
-        margin-top: -1px;
-        top: 50%;
-        left: 10px;
-        width: 20px;
-        height: 2px;
-        border-radius: 2px;
-        background-color: @black;
-    }
-    &__nav-user-link{
+    &__nav-user-link {
         display: none;
         margin-top: 30px;
-        margin-right: 25px;
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        @media @bw1020{
+
+        @media @bw1020 {
             display: flex;
+            gap: 25px;
         }
     }
 
-    &__user-icon{
-        display: none;
-        @media @bw1020{
-            display: block;
-        }
+    &__nav-logout {
+        width: 24px;
+        height: 24px;
+        font-size: 0;
     }
 
-    &__user-btn{
-    &.btn{
-        @media @bw1020{
-            margin-right: -8px;
-            border: none;
-            font-size: 0;
-            width: 40px;
-            height: 40px;
-            padding: 0;
-        }
-    }
-    }
-
-    &__right-block{
+    &__right-block {
+        position: relative;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         width: 202px;
         z-index: 1;
-        @media @bw1660{
-            width: 152px;
+
+        @media @bw1660 {
+            width: 111px;
         }
-        @media @bw1020{
+
+        @media @bw1020 {
             margin-left: auto;
             width: auto;
             gap: 30px;
         }
     }
 
+    &__user-btn {
+        max-width: 100%;
 
+        &.btn {
+            @media @bw1020 {
+                margin-right: -8px;
+                border: none;
+                font-size: 0;
+                width: 40px;
+                height: 40px;
+                padding: 0;
+            }
+        }
+    }
+
+    &__user-icon {
+        display: none;
+
+        @media @bw1020 {
+            display: block;
+        }
+    }
+
+    &__nav-toggle {
+        display: none;
+        cursor: pointer;
+
+        @media @bw1020 {
+            display: block;
+            position: relative;
+            right: -11px;
+            margin-left: 18px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: none;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 19px;
+            left: 11px;
+            width: 18px;
+            height: 2px;
+            border-radius: 2px;
+            background-color: @black;
+            transform-origin: 50% 50%;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        &::before {
+            top: 13px;
+            box-shadow: 0 6px 0 @black;
+        }
+
+        &::after {
+            top: 25px;
+        }
+    }
 }

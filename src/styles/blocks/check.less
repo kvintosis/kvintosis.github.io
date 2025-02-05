@@ -1,70 +1,102 @@
-.check{
+.check {
     box-sizing: border-box;
     position: relative;
-    padding-left: 24px;
     display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
     min-height: 24px;
     padding-top: 2px;
     padding-left: 24px;
     color: @black;
     cursor: pointer;
 
-    &__input{
+    &__input {
         .is-hidden;
-    &:checked{
-        & ~ .check__mark{
-        background-color: @black;
-        &::after{
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: 7px;
-            width: 6px;
-            height: 12px;
-            background-color: transparent;
-            border-bottom: 2px solid @white;
-            border-right: 2px solid @white;
-            border-radius: 2px;
-            transform: rotate (45deg);
+
+        &:checked {
+          & ~ .check__mark--black {
+            background-color: @black;
+
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 7px;
+              top: 2px;
+              width: 6px;
+              height: 12px;
+              background-color: transparent;
+              border-bottom: 2px solid @white;
+              border-right: 2px solid @white;
+              border-radius: 2px;
+              transform: rotate(45deg);
             }
+          }
+
+          & ~ .check__mark--red {
+            background-color: @red;
+
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 7px;
+              top: 2px;
+              width: 6px;
+              height: 12px;
+              background-color: transparent;
+              border-bottom: 2px solid @white;
+              border-right: 2px solid @white;
+              border-radius: 2px;
+              transform: rotate(45deg);
+            }
+          }
         }
     }
-}
-    &__mark{
+
+    &--red {
+      color: @red;
+      .check__mark {
+        border-color: @red;
+      }
+    } 
+
+    &--black {
+      color: @black;
+      .check__mark {
+        border-color: @black;
+      }
+    }  
+
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &__mark {
+        box-sizing: border-box;
+        display: block;
         position: absolute;
-        top: 0;
         left: 0;
+        top: 0;
         width: 24px;
         height: 24px;
         background-color: transparent;
-        border: 2px solid @black;
+        border: 1px solid @black;
         transition: background-color 0.2s;
     }
 
-    &__label{
+    &__label {
         margin-left: 15px;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.3;
         color: @black;
-    }
-
-    &--red{
-        color: @red;
-        .check__mark{
-            border-color: @red ;
+        
+        &--s {
+          font-size: 14px;
+          line-height: 19px;
+          font-weight: 300;
         }
-        .__input{
-            &:checked{
-                & ~ .check__mark{
-                    background-color: @red;
-                }
-            }
-        }
-    }
-
-    &--disabled{
-        pointer-events: none;
-        opacity: 0.5s;
     }
 }

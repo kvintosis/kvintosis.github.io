@@ -1,62 +1,228 @@
-.about{
-    &__container{
-        .container();
+.about {
+    margin: 150px 0 0;
+    &__container {
+        .container;
     }
-    &__block2{
+    
+    &__block{
         display: grid;
         grid-template-columns: 1fr  400px;
         grid-template-areas: 
-        "pic1 pic2"
-        "title pic2"
-        "text text";
-        gap: 60px, 50px;
-    }
-    &__picture{
-        grid-area: pic1;
+            "title1 title1"
+            "text1 text1"
+            "pic1 pic2"
+            "title2 pic2"
+            "text2 text2";
+        gap: 50px, 60px;
+
+        @media @bw1020 {
+            grid-template-columns: 1fr 260px;
+            grid-template-areas:
+                "title1 title1"
+                "text1 text1"
+                "pic1 pic1"
+                "title2 pic2"
+                "text2 pic2";
+            gap: 40px 27px;
+        }
+
+        @media @bw600{
+            grid-template-columns: 1fr 236px;
+            grid-template-areas:
+                "title1 title1"
+                "text1 text1"
+                "pic1 pic1"
+                "title2 title2"
+                "text2 text2"
+                ". pic2";
+            gap: 60px;
+        }
     }
 
-    &__subtitle{
-        grid-area: title;
-        margin: 50px 0 0;
-        font-size: 44px;
-    }
-    &__text{
-        grid-area: text;
+    &__subtitle1,
+    &__subtitle2{
         margin: 0;
-        margin-left: auto;
-        max-width: 870px;
-    }
-    &__picture2{
-        grid-area: pic2;
-        align-self: flex-end;
+        font-size: 44px;
+        line-height: 1.3;
+
+        @media @bw1020{
+            font-size: 26px;
+        }
     }
 
-    &__block3-picture{
+
+    &__text1,
+    &__text2 {
+        margin: 0;
+        max-width: 870px;
+        width: 100%;
+        margin-left: auto;
+        line-height: 1.3;
+
+        @media @bw600{
+            margin-top: -30px;
+            max-width: 100%;
+        }
+    }
+
+    &__subtitle1 {
+        grid-area: title1;
+    }
+
+    &__text1 {
+        grid-area: text1;
+    }
+
+    &__picture1 {
+        grid-area: pic1;
         position: relative;
-        box-sizing: border-box;
-        //padding: 18px 8px 0px 30px;
+
         &::before{
             content: '';
+            display: block;
+            padding-top: 66.3218%;
+            width: 100%;
+        }
+    } 
+
+    &__img1{
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__subtitle2 {
+        grid-area: title2;
+        margin: 50px 0 0;
+
+        @media @bw1020{
+            margin-top: 30px;
+        }
+    }
+
+    &__text2 {
+        grid-area: text2;
+
+        @media @bw1020{
+            max-width: 350px;
+        }
+    }
+
+    &__picture2 {
+        grid-area: pic2;
+        align-self: flex-end;
+        position: relative;
+
+        &::before{
+            content: '';
+            display: block;
+            padding-top: 122.029%;
+            width: 100%;
+        } 
+    }
+
+    &__img2{
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__block3 {
+        margin: 110px 0 0;
+        display: grid;
+        grid-template-columns: 1fr 344px;
+        grid-template-areas: "pic3 content";
+        gap: 60px;
+
+        @media @bw1020{
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        @media @bw600{
+            gap: 60px;
+        }
+    }
+
+    &__picture3{
+        grid-area: pic3;
+        display: block;
+        max-width: 930px;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        padding: 18px 19px 0 49px;
+
+        &::before {
+            position: absolute;
+            content: "";
             top: 0;
             left: 0;
             right: 0;
             height: 64.7%;
             background-color: @red;
         }
-        &::after{
-            content: '';
+
+        &::after {
+            content: "";
             display: block;
             width: 100%;
             padding-top: 40.86%;
         }
     }
+
+
     &__block3-img{
-        display: block;
-        max-width: 930px;
-        position:absolute;
+         position: absolute;
         top: 19px;
         left: 49px;
         width: calc(100% - 57px);
         object-fit: contain;
+    }
+
+    &__block3-content {
+        grid-area: content;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+
+        @media @bw1020{
+            flex-direction: row;
+            gap: 166px;
+        }
+
+        @media @bw600{
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+    }
+
+    &__block3-link {
+        display: flex;
+        justify-content: space-between;
+        max-width: 344px;
+        width: 100%;
+        align-items: center;
+        text-decoration: none;
+
+        @media @bw1020{
+            max-width: 262px;
+            width: 100%;
+        }
+
+        @media @bw600{
+            max-width: 280px;
+        }
     }
 }

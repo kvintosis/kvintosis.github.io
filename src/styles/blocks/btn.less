@@ -15,13 +15,50 @@
     line-height: 1.3;
     color: #1F1E1E;
     transition: background-color 0.2s, color 0.2s;
-    &:hover, &:active {
+
+    &:hover, 
+    &:active {
     background-color: #1F1E1E;
     color: #ffffff;
     }
+
     &--red{
         background-color: #BC3324;
         border-color: #BC3324;
         color:#ffffff;
+
+        &:hover,
+        &:active {
+            background-color: @red_dark;
+            color: #ffffff;
+        }
+    }
+
+    .x-btn {
+        display: flex;
+        outline: none;
+        border: none;
+        padding: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: @black;
+        transition: background-color 0.2s;
+    
+        @media @bw768 {
+            width: 36px;
+            height: 36px;
+        }
+    
+        &:hover {
+            background-color: @red_dark;
+        }
+    
+        &__icon {
+            pointer-events: none;
+            margin: auto;
+            color: @white;
+            pointer-events: none;
+        }
     }
 }
