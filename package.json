@@ -30,5 +30,11 @@
         "build": "gulp build",
         "serve": "gulp serve",
         "start": "gulp start"
+    },
+    "dependencies": {
+        "air-datepicker": "^3.5.3",
+        "jquery": "^3.7.1",
+        "swiper": "^11.2.2",
+        "toastr": "^2.1.4"
     }
 }
