@@ -3057,6 +3057,28 @@ button.swiper-pagination-bullet {
 .arrow__events-icon {
   rotate: 90deg;
 }
+.scene__table {
+  cursor: pointer;
+}
+.scene__table--red .scene__table-group {
+  fill: #BD362F;
+}
+.scene__table--red .scene__table-num {
+  fill: #FFFFFF;
+}
+.scene__table--black .scene__table-group {
+  fill: #000000;
+}
+.scene__table--black .scene__table-num {
+  fill: #FFFFFF;
+}
+.scene__table--disabled {
+  pointer-events: none;
+}
+.scene__table--disabled .scene__table-group,
+.scene__table--disabled .scene__table-num {
+  opacity: 0.5;
+}
 .offers {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3705,9 +3727,6 @@ button.swiper-pagination-bullet {
 }
 .pp {
   display: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: fixed;
@@ -3715,8 +3734,8 @@ button.swiper-pagination-bullet {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 90px 40px 50px;
-  background-color: rgba(222, 222, 222, 0.98);
+  padding: 90px 100px 50px;
+  background-color: rgba(222, 222, 222, 0.9);
   overflow-y: auto;
   z-index: 110;
 }
@@ -3739,10 +3758,10 @@ button.swiper-pagination-bullet {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  min-width: 1210px;
+  max-width: 1210px;
   margin: auto;
   background-color: #dedede;
-  background-image: url(../assets/images/pp/noise.jpg);
+  background-image: url(../assets/images/noise.png);
   background-position: 0 0;
   background-size: auto;
   background-repeat: repeat;
@@ -4612,7 +4631,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   padding-top: 40.86%;
 }
-.about__block3-img {
+.about__img3 {
   position: absolute;
   top: 19px;
   left: 49px;
@@ -5256,7 +5275,7 @@ button.swiper-pagination-bullet {
             flex-direction: column;
     gap: 30px;
     width: 100%;
-    height: 100%;
+    height: 1000%;
     background-color: rgba(222, 222, 222, 0.98);
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
